@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 设备类型探测标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maxium-scale=1, user-scalable=no">
+    <title>智节路灯管理系统</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="bs/js/jquery.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
+    <script src="holder.js"></script>
+</head>
+<body>
+    <nav class="navbar  navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+              <span class="text-lg color_white"><b>智节路灯云管理平台 </b></span>
+          </a>
+          <p class="navbar-text">
+                <span class="hidden-xs">智慧节能路灯云管理系统，让路灯充照亮世界</span> 
+          </p>
+        </div>
+
+
+        <button id="navbtn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" id="myNav_userinfo">
+              <a id="btn_userinfo" href="javascript:void()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span class="color_white glyphicon glyphicon-user"></span>
+                  &nbsp;&nbsp;Username &nbsp;
+                  <span class="color_white caret"></span> 
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                    <a href="#" class="">
+                        <span  class="text-lg text-info glyphicon glyphicon-info-sign"></span>
+                        &nbsp;用户信息
+                    </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                    <a href="#">
+                        <span class="text-lg text-danger glyphicon glyphicon-log-out"></span>
+                        &nbsp;退出登录
+                    </a>
+                </li>
+              </ul> <!-- dropdown-menu -->
+
+            </li>
+          </ul>
+        </div> 
+        </div> <!-- <container-fluid> -->
+    </nav>    
+
+    
+
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2 bg-info" style="border-right:1px solid #c3c3c3;height:700px">
+                <br>
+                
+                <ul class="nav nav-pills nav-stacked nav-fixed-left">
+                    <li class="active"><a href="">控制中心</a></li>
+                    <li><a href="">设备列表</a></li>
+                    <li><a href="">创建设备</a></li>
+                    <li><a href="">透传分组</a></li>
+                    <li><a href="">用户信息</a></li>
+                    <li><a href="">添加用户</a></li>
+                    <li><a href="">关于我们</a></li>
+                </ul>
+
+                <hr>
+                <center id="time" class="clock"></center> 
+                <center id="date" class="clock"></center>
+                <hr>
+            </div>
+
+            <div class="col-md-10">
+              <h1 class="page-header">This is Title</h1>
+            </div>
+          </div>
+      </div><!-- /.container-fluid -->
+
+
+      <script>
+          function a(a){
+              alert(a);
+          }
+
+
+          function getCurrentTime(){
+              var t = new Date();
+
+              var H = t.getHours()+"";
+              var M = t.getMinutes()+"";
+              var S = t.getSeconds()+"";
+              var y = t.getFullYear();
+              var m = t.getMonth()+"";
+              var d = t.getDate()+"";
+
+              if(H.length < 2)H = "0"+H;
+              if(M.length < 2)M = "0"+M;
+              if(S.length < 2)S = "0"+S;
+              if(m.length < 2)m = "0"+m;
+              if(d.length < 2)d = "0"+d;
+
+
+              document.getElementById("time").innerHTML = H + ":" + M + ":" + S;
+              document.getElementById("date").innerHTML = y + "-" + m + "-" + d;
+          }
+
+          setInterval(getCurrentTime,1000);
+          getCurrentTime()
+
+      </script>
+</body>
+</html>

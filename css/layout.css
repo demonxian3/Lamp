@@ -1,0 +1,55 @@
+﻿*{
+    font-family:微软雅黑;
+}
+body{
+    padding-top:50px
+}
+.color_white{
+    color: white;
+}
+#myNav_userinfo{
+    padding-right:13px;
+    margin-right:0px;
+}
+#time{
+    margin-top:200px;
+    font-size:35px;
+    color:#337abd;
+}
+#date{
+    font-size:18px;
+    color:#337abd;
+}
+#navbtn{
+    margin-top:-38px;
+    margin-right:-3px;
+}
+#navbtn:hover{
+    background: #008FBF;
+    color: white;
+}
+.shadow{
+    box-shadow:2px 5px 5px 0 rgba(0, 0, 0, 0.10)
+}
+.myThumnail{
+    cursor: pointer;
+    height:250px;
+    background: #f5f5f6;
+}
+.myThumnail .fa{
+    margin-top: 36px;
+    font-size:60px;
+}
+
+.myThumnail:hover{
+    box-shadow:0 0 10px rgba(235,94,0,.8);
+}
+#leftbar{
+    position:fixed;
+}
+.my-table-border{
+    border: 1px solid #E1E6EB;
+}
+.my-table-border th{
+    background: #E8E8E8
+}
