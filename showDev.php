@@ -13,10 +13,10 @@
 
 
 
-            <div class="col-md-10 " style="height:750px" > <br>
+            <div class="col-md-10 col-md-offset-2" style="height:750px" > <br>
 
             <span class="text-lg text-default"><b>设备列表：</b></span>
-            <button class="btn btn-primary btn-xs">添加设备</button> 
+            <a href="createDev.php" class="btn btn-primary btn-xs">添加设备</a> 
             <hr>
             <form class="form-inline" action="">
                 <div class="form-group">
@@ -35,7 +35,7 @@
             </form>
             <br>
             <br>
-            <table class="table table-striped table-hover my-table-border">
+            <table class="table table-striped table-hover my-border ">
                  <tr class="">
                      <th>
                         <a href="" data-toggle='tooltip' data-original-title="每5s刷新">状态</a>
@@ -55,9 +55,9 @@
                     <td> 0s (永不过期)</td>
                     <td> <i class="fa fa-map-marker fa-lg text-danger" aria-hidden="true"></i> 广东省深圳市罗湖区清水河一路10 </td>
                     <td>
-                        <a href='' title='调试'><i class="fa fa-cog fa-fw fa-lg"></i></a>
-                        <a href='' title='详情'><i class="fa fa-search-plus fa-fw fa-lg"></i></a>
-                        <a href='' title='编辑'><i class="fa fa-edit fa-fw fa-lg"></i></a>
+                        <a href='debug.php' title='调试'><i class="fa fa-cog fa-fw fa-lg"></i></a>
+                        <a href='detailDev.php' title='详情'><i class="fa fa-search-plus fa-fw fa-lg"></i></a>
+                        <a href='createDev.php' title='编辑'><i class="fa fa-edit fa-fw fa-lg"></i></a>
                         <a href='' title='删除'><i class="fa fa-trash-o fa-fw fa-lg"></i></a>
                     </td>
                 </tr>
@@ -69,19 +69,29 @@
                     <td> 300s </td>
                     <td> <i class="fa fa-map-marker fa-lg text-danger" aria-hidden="true"></i> 广东省深圳市龙岗区龙翔大道</td>
                     <td>
-                        <a href='' title='调试'><i class="fa fa-cog fa-fw fa-lg"></i></a>
+                        <a href='debug.php' title='调试'><i class="fa fa-cog fa-fw fa-lg"></i></a>
                         <a href='' title='详情'><i class="fa fa-search-plus fa-fw fa-lg"></i></a>
                         <a href='' title='编辑'><i class="fa fa-edit fa-fw fa-lg"></i></a>
                         <a href='' title='删除'><i class="fa fa-trash-o fa-fw fa-lg"></i></a>
                     </td>
                 </tr>
              </table>
-          </div> <!-- row -->
+          </div> <!-- mainbar -->
 
-        </div> <!-- col-md-10 -->
+        </div> <!-- row -->
+            <?php include("modal.html");?>
       </div><!-- .container-fluid -->
 
 
     <script src="js/layout.js"></script>
+    <script>
+        $("#leftbar li").each(  function(){
+            $(this).removeClass('active');
+            if($(this).index('#leftbar li') == 2){
+                $(this).addClass('active');
+            }
+        })
+    </script>
+
 </body>
 </html>

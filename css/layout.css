@@ -47,9 +47,53 @@ body{
 #leftbar{
     position:fixed;
 }
-.my-table-border{
+.my-border {
     border: 1px solid #E1E6EB;
 }
-.my-table-border th{
+.my-border th{
     background: #E8E8E8
+}
+.debugScreen {
+    height: 480px;
+    padding: 20px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ddd;
+    resize: none;
+    overflow: auto;
+    background: #efefef;
+}
+.debugScreen .rep {
+    border-radius:5px;
+    width: 400px;
+    color: white;
+    background: #0066cc;
+    overflow: hidden;
+}
+
+.debugScreen .media-left{
+    font-size: 24px;
+    color:#0066cc
+}
+.debugScreen .media-right{
+    font-size: 24px;
+    color:#555555;
+}
+.debugScreen .req {
+    border-radius:5px;
+    width: 400px;
+    color: white;
+    background: #555555;
+    overflow: hidden;
+}
+.workorder-info {
+    padding: 15px;
+    background-color: #EAEDF1;
+    border: none;
+    border-radius: 0;
+}
+
+.workorder-info .title{
+    color: #888888;
 }
