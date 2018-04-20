@@ -1,7 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="zh_CN">
 <head>
-<?php include("head.html"); ?>
+    <?php include("head.html"); ?>
+    <link rel="stylesheet" href="css/baidu.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pMFfCI92eZVChOWyVNGQeOcWP4BYLxty"></script>
 </head>
 <body>
 <?php include("nav.html"); ?>
@@ -50,16 +52,15 @@
                                         </div>
                                     </div> <!-- row -->
                                     <div class="form-group">
-                                        <label class="label-control" for="">描述</label>
-                                        <textarea class="form-control input-sm" name="" cols="30" rows="10">
-                                        </textarea>
+                                        <label class="label-control" for="">备注描述</label>
+                                        <textarea id="remark" class="form-control input-sm" name="" cols="30" rows="10"> </textarea>
                                     </div>
                                     <div class="form-group">
                                         <label class="label-control" for="">地理位置</label>
-                                        <input class="form-control" type="">
+                                        <div id="showInfo"  class="form-control" type=""></div>
                                     </div>
                                     <div class="form-group"> <!-- baidu map -->
-                                    <img src="holder.js/710x280" alt="">
+                                        <div id="myMap"> </div>
                                     </div>  <!-- baidu map -->
                                     <div class="text-right">
                                         <input class="btn btn-primary" type="submit" value="提交">
@@ -118,6 +119,7 @@
             }
         })
     </script>
+    <script src="js/baidu.js"></script>
 
 </body>
 </html>
